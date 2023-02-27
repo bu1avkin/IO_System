@@ -8,7 +8,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Warehouse {
+public class Machine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,7 +18,7 @@ public class Warehouse {
     private Date date_exported;
     private String driver_name;
 
-    protected Warehouse() {
+    protected Machine() {
     }
 
     public Long getId() {
