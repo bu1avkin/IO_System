@@ -10,18 +10,18 @@ public class WarehouseService {
     @Autowired
     private WarehouseRepository repo;
 
-    public List<Warehouse> listAll(String keyword){
+    public List<Machine> listAll(String keyword){
         if (keyword != null){
             return repo.search(keyword);
         }
         return repo.findAll();
     }
 
-    public void save(Warehouse warehouse) {
+    public void save(Machine warehouse) {
         repo.save(warehouse);
     }
 
-    public Warehouse get(Long id) {
+    public Machine get(Long id) {
         return repo.findById(id).get();
     }
 
